@@ -1,1 +1,7 @@
-// We will write notes here
+// We will write notes here {romoz tech}
+
+
+** dependencies **
+
+react-router
+bootstrap and react bootstrap
