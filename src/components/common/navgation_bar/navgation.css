@@ -1,0 +1,7 @@
+.navgation {
+  background-color: #350036;
+  .btn_side_bar {
+    width: 70px;
+    border-radius: 10px;
+  }
+}

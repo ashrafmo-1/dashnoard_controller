@@ -1,0 +1,22 @@
+.side_bar_controller {
+  direction: rtl;
+  transition: 0.5s !important;
+  .btn-close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    border: 1px solid #777;
+    padding: 10px;
+    font-size: 25px;
+  }
+  .link {
+    border: 1px solid #777;
+    background-color: #350036;
+    color: yellow;
+    transition: .3s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

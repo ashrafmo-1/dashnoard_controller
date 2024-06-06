@@ -1,3 +1,8 @@
 body {
   font-family: sans-serif;
 }
+
+.dash_container {
+  width: 90%;
+  margin: auto;
+}
