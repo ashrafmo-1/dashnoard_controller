@@ -5,3 +5,7 @@
 
 react-router
 bootstrap and react bootstrap
+
+
+** errors **
+import svgr from '@svgr/vite-plugin' // importing error

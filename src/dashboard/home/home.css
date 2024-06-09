@@ -1,0 +1,29 @@
+.home_page {
+  direction: rtl;
+  height: 80vh;
+  h2 {
+    overflow: hidden;
+    height: 45px;
+    white-space: nowrap;
+    border-left: 0.15em solid black;
+    padding-inline: 4px;
+    animation: typing 3.5s steps(50, end) 0.75s 1 normal, blink-caret 0.75s step-end infinite;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}

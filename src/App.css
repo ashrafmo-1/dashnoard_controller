@@ -1,8 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  resize: none;
+  outline: none;
+  text-decoration: none;
+}
+:root { /* main variables */
+  --main-color: #350036;
+  --sec-color: ;
+  --th-color: ;
+}
 body {
   font-family: sans-serif;
+  background-color: #eee !important;
 }
-
-.dash_container {
+.dash_container { /* hand made container */
   width: 90%;
   margin: auto;
+}
+/* edit scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #8d0808;
+  border-radius: 9px;
+}
+/* select text */
+/* select text */
+::selection {
+  background: #8d0808;
+  color: #ffffff;
 }
