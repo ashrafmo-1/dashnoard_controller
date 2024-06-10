@@ -1,4 +1,5 @@
 // import { useContext, useState } from "react";
+import { Spinner } from "react-bootstrap";
 import "./login.css";
 import useAuthLogin from "./useAuthLogin";
 // import { User_token } from "../../components/context/context";
@@ -39,7 +40,7 @@ const Login = () => {
   //     console.error("Error during login:", error);
   //   }
   // };
-  const { formik } = useAuthLogin();
+  const { formik, loading } = useAuthLogin();
 
   // jsx code
   return (
@@ -86,7 +87,13 @@ const Login = () => {
             />
           </div>
           <button className="sign mt-3 rounded p-3 d-block w-100 text-center fs-3 fw-bold">
-            تسجيل الدخول
+            {loading ? (
+              <>
+                <Spinner animation="border" size="sm"></Spinner>جاري التحميل...
+              </>
+            ) : (
+              "تسجيل الدخول"
+            )}
           </button>
         </form>
       </div>

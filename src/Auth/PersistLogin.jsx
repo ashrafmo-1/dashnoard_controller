@@ -34,7 +34,7 @@ const PersistLogin = () => {
     //     setLoading(false);
     //   }
     // }
-    const token = window.localStorage.getItem("token");
+    const token = window.localStorage.getItem("access_token");
     token ? setLoading(false) : setLoading(true);
   }, []);
 

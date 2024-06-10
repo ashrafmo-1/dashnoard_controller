@@ -11,7 +11,7 @@ export default function Navgation() {
   const handleShow = () => setShow(true);
   const { logOut } = useAuthLogin();
   // const navigate = useNavigate();
-  const token = window.localStorage.getItem("token");
+  const token = window.localStorage.getItem("access_token");
   // const clearStorage = () => {  onClick={clearStorage}
   //   localStorage.removeItem("token");
   //   window.location.pathname = "/";

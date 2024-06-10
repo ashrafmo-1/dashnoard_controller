@@ -17,7 +17,7 @@ function App() {
       <div className="dash_container">
         <Routes>
           <Route path="/" element={<Navigate to="/dashboard/home" />} />
-          <Route element={<PersistLogin />}>
+          {/* <Route element={<PersistLogin />}> */}
             {/* Prodect Login Page */}
             <Route element={<RequireAuth />}>
               <Route path="/login" element={<Login />} />
@@ -29,7 +29,7 @@ function App() {
                 <Route path="admins" element={<Admins />} />
               </Route>
             </Route>
-          </Route>
+          {/* </Route> */}
         </Routes>
       </div>
     </main>
