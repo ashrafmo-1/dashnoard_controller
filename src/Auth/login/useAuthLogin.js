@@ -15,9 +15,14 @@ const useAuthLogin = () => {
         valuse
       );
       const token = response.data.access_token;
+      const name = response.data.admin.name;
+      const email = response.data.admin.email;
       window.localStorage.setItem("access_token", token);
+      window.localStorage.setItem("name", name);
+      window.localStorage.setItem("email", email);
       navigate("/dashboard/home");
       console.log(response.data.admin);
+      window.location.reload()
     } catch (error) {
       console.log(error);
     } finally {
@@ -28,8 +33,8 @@ const useAuthLogin = () => {
   //  Formik to handle the input field
   const formik = useFormik({
     initialValues: {
-      email: "",
-      password: "",
+      email: "Admin1@gmail.com",
+      password: "Admin_12",
     },
     onSubmit: handleSubmit,
   });
@@ -37,6 +42,8 @@ const useAuthLogin = () => {
   // Logout Functions
   const logOut = () => {
     window.localStorage.removeItem("access_token");
+    window.localStorage.removeItem("name");
+    window.localStorage.removeItem("email");
     navigate("/login");
   };
   return { formik, logOut, loading };

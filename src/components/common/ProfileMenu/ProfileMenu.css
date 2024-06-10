@@ -1,0 +1,12 @@
+.profile-menu {
+  width: 220px;
+  top: 120%;
+  left: -10rem;
+  position: absolute;
+}
+
+@media (max-width : 969px) {
+    .profile-menu {
+        left: -8rem;
+    }
+}

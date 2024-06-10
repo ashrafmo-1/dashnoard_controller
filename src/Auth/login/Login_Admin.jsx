@@ -89,7 +89,7 @@ const Login = () => {
           <button className="sign mt-3 rounded p-3 d-block w-100 text-center fs-3 fw-bold">
             {loading ? (
               <>
-                <Spinner animation="border" size="sm"></Spinner>جاري التحميل...
+               <Spinner animation="border" size="sm"></Spinner>
               </>
             ) : (
               "تسجيل الدخول"

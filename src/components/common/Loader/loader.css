@@ -18,6 +18,7 @@
   position: relative;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
+  -webkit-animation: rotation 1s linear infinite;
 }
 .loader::after {
   content: '';  
