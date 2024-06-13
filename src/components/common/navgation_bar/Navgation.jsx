@@ -2,7 +2,7 @@ import { useState } from "react";
 import Side from "../side_bar/side";
 import "./navgation.css";
 import bars from "../../../../public/assets/bars.svg?react";
-// import { DarkLight } from "../../icons/DarkLight";
+import { DarkLight } from "../../icons/DarkLight";
 import profileImg from "../../../../public/assets/Profile-Avatar-PNG.png";
 import { ProfileMenu } from "../ProfileMenu/ProfileMenu";
 
@@ -47,7 +47,7 @@ export default function Navgation() {
               </div>
               <>
                 <Side show_side={show} setShowSide={setShow} />
-                {/* <DarkLight /> */}
+                <DarkLight />
               </>
             </div>
           </div>

@@ -1,16 +1,38 @@
 .home_page {
-  direction: rtl;
-  height: 80vh;
-  h2 {
+  /* direction: rtl; */
+  height: 100vh;
+  margin-top: 120px;
+  flex-direction: column;
+  .brand_logo {
+    background-color: #350036;
+    box-shadow: 0 0 8px var(--description_color);
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  .homeTitle {
     overflow: hidden;
     height: 45px;
+    color: var(--text_color);
     white-space: nowrap;
-    border-left: 0.15em solid black;
+    border-right: 0.15em solid var(--description_color);
     padding-inline: 4px;
-    animation: typing 3.5s steps(50, end) 0.75s 1 normal, blink-caret 0.75s step-end infinite;
+    animation: typing-eng 3.5s steps(50, end) 0.75s 1 normal, blink-caret 0.75s step-end infinite;
+    width: fit-content;
   }
 }
-@keyframes typing {
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-700px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.home_page {
+  animation: slide-down 1s ease-out;
+}
+@keyframes typing-eng {
   from {
     width: 0;
   }
@@ -18,7 +40,6 @@
     width: 100%;
   }
 }
-
 @keyframes blink-caret {
   from, to {
     border-color: transparent;

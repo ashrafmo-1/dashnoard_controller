@@ -33,7 +33,7 @@ const Side = ({ show_side, setShowSide }) => {
             title={`المستخدمين`}
           />
           <SideBarMenu
-            to={"/dashboard/admins"}
+            to={"/dashboard/admins/showAdmins"}
             className={`link text-decoration-none py-2 px-2 rounded fs-4 fw-bold`}
             title={`المدراء`}
           />

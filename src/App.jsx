@@ -6,10 +6,9 @@ import Navgationmain from "./components/common/navgation_bar/Navgation";
 import Admins from "./dashboard/admins/Admins";
 import RequireAuth from "./Auth/RequireAuth";
 import LoginProdect from "./Auth/LoginProdect";
-import PersistLogin from "./Auth/PersistLogin";
-// import RequireAuth from "./Auth/RequireAuth";
+import AddNewItem from "./components/AddNewItem/AddNewItem";
+import Error from "./components/common/Error/Error";
 
-// Start of Selection
 function App() {
   return (
     <main>
@@ -17,19 +16,19 @@ function App() {
       <div className="dash_container">
         <Routes>
           <Route path="/" element={<Navigate to="/dashboard/home" />} />
-          {/* <Route element={<PersistLogin />}> */}
-            {/* Prodect Login Page */}
-            <Route element={<RequireAuth />}>
-              <Route path="/login" element={<Login />} />
-            </Route>
-            {/* Product Pages When Login */}
-            <Route element={<LoginProdect />}>
-              <Route path="/dashboard">
-                <Route path="home" element={<Home />} />
-                <Route path="admins" element={<Admins />} />
-              </Route>
-            </Route>
-          {/* </Route> */}
+          <Route element={<RequireAuth />}>
+            <Route path="/login" element={<Login />} />
+          </Route>
+          <Route element={<LoginProdect />}>
+            <Route path="/dashboard"> {/* start all pages */}
+              <Route path="home" element={<Home />} />
+              <Route path="admins"> {/* start admins */}
+                <Route path="showAdmins" element={<Admins />} />
+                <Route path="newadmin" element={<AddNewItem />} />
+              </Route> {/* start end */}
+            </Route> {/* start all pages */}
+          </Route>
+          <Route path="*" element={<Error />} />
         </Routes>
       </div>
     </main>

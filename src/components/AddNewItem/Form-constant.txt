@@ -1,0 +1,10 @@
+          <Form_constant
+            label={"الاسم"}
+            type={"text"}
+            placeholder={"ادخل اسمك"}
+          />
+          <Form_constant
+            label={""}
+            type={"email"}
+            placeholder={"ادخل الاميل الخاص بك"}
+          />

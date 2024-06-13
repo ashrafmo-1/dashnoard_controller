@@ -2,3 +2,10 @@
   margin-top: 9rem !important;
   direction: rtl;
 }
+
+.table-bordered>:not(caption)>*>* {
+  border-width: 0 var(--bs-border-width);
+  border-color: var(--description_color);
+  background: var(--main_color) !important;
+  color: var(--text_color) !important;
+}

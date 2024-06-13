@@ -2,6 +2,7 @@ import axios from "axios";
 import { useFormik } from "formik";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const useAuthLogin = () => {
   const [loading, setLoading] = useState(false);
@@ -22,8 +23,17 @@ const useAuthLogin = () => {
       window.localStorage.setItem("email", email);
       navigate("/dashboard/home");
       console.log(response.data.admin);
-      window.location.reload()
+      window.location.reload();
     } catch (error) {
+      if (error.response.status === 422) {
+        console.log("Validation error:", error.response.data.password.toString());
+        console.log("Validation error:", error.response.data.email.toString());
+        Swal.fire({
+          icon: "error",
+          title: "Validation Error",
+          text: "Please check your email and password and try again.",
+        });
+      }
       console.log(error);
     } finally {
       setLoading(false);

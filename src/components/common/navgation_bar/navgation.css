@@ -1,16 +1,17 @@
 .navgation {
-  background-color: #350036;
+  background-color: var(--main_color);
+  box-shadow: 0 0 8px var(--description_color);
   .btn_side_bar {
     width: 70px;
     border-radius: 10px;
+    cursor: pointer;
   }
 }
-
 .profile-img {
   width: 50px;
   height: 50px;
+  background-color: #350036;
 }
-
 .btn-profile {
   width: 50px;
   height: 50px;
@@ -20,12 +21,11 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-
 .profile-name {
-  color: #ddd;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
+  color: var(--text_color) !important;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
 }

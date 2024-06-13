@@ -1,0 +1,37 @@
+  // import { User_token } from "../../components/context/context";
+// import { useNavigate } from "react-router-dom";
+// import Cookies from "universal-cookie";
+// import { useNavigate } from "react-router-dom";
+  
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  // const cureentUser = useContext(User_token);
+  // const nav = useNavigate();
+  // const cookie = new Cookies();
+  // const login = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await fetch("http://127.0.0.1:8000/api/login", {
+  //       method: "post",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         email: email,
+  //         password: password,
+  //       }),
+  //     });
+  //     if (response.status === 200) {
+  //       const data = await response.json();
+  //       const token = data.data.token;
+  //       const user = data.data.user;
+  //       cureentUser.setAuth({ token, user });
+  //       cookie.set("Bearer", token);
+  //       nav("/");
+  //       setEmail("");
+  //       setPassword("");
+  //     }
+  //   } catch (error) {
+  //     console.error("Error during login:", error);
+  //   }
+  // };
